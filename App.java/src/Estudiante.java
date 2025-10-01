@@ -9,12 +9,10 @@ public class Estudiante {
     private double promedio;
     private List<Materia> materias;
 
-    // Constructor sin parámetros
     public Estudiante() {
         this.materias = new ArrayList<>();
     }
 
-    // Constructor con parámetros
     public Estudiante(String nombre, String apellido, int edad, String carrera, double promedio) {
         this();
         setNombre(nombre);
@@ -24,7 +22,6 @@ public class Estudiante {
         setPromedio(promedio);
     }
 
-    // Getters y Setters con validaciones
     public String getNombre() { return nombre; }
     public void setNombre(String nombre) {
         if (nombre != null && !nombre.trim().isEmpty()) {
@@ -64,7 +61,6 @@ public class Estudiante {
         }
     }
 
-    // Métodos relacionados con materias
     public void agregarMateria(Materia materia) {
         materias.add(materia);
         calcularPromedio();
@@ -84,3 +80,4 @@ public class Estudiante {
 
     public List<Materia> getMaterias() { return materias; }
 }
+
